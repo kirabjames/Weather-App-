@@ -1,0 +1,64 @@
+body {
+  background-origin: url("images/arizona.jpg");
+  background: center/cover url("images/arizona.jpg") no-repeat;
+}
+
+p {
+  font-family: Georgia, "Times New Roman", Times, serif;
+}
+h3 {
+  color: orangered;
+}
+h1 {
+  color: orangered;
+}
+h2 {
+  color: orangered;
+}
+.container {
+  margin-top: 100px;
+  margin-bottom: 400px;
+}
+.card {
+  max-width: 595px;
+  max-height: 400;
+  margin: 100px auto;
+  background-color: #f8f3f081;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+#searchbtn:hover {
+  background: #b8aba465;
+  border: none;
+  cursor: pointer;
+}
+.row-other-city {
+  padding: 10px 10px 10px 10px;
+  margin: 10px 20px 10px 20px;
+}
+#searchbtn {
+  color: blue;
+  border: none;
+  background: blue;
+  line-height: 15px;
+  transition: all 150ms ease-in-out;
+}
+#city-input {
+  display: block;
+  text-align: left;
+  width: 250px;
+  margin-bottom: 25px;
+  color: black;
+  line-height: 30px;
+}
+li {
+  color: orangered;
+  font-size: 20px;
+}
+.temperature {
+  color: orangered;
+  font-size: 20px;
+}
+.units {
+  color: orangered;
+}
