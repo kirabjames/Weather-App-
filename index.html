@@ -12,10 +12,7 @@
     />
     <script src="https://unpkg.com/axios@1.1.2/dist/axios.min.js"></script>
     
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="src/style.css">
+    <link rel="stylesheet" href="src/style.css"/>
     <title>Weather App</title>
   </head>
   
@@ -55,14 +52,14 @@
             <div class="overview">
             <h1 id="city"></h1>
             <ul>
-              <li>Last updated:<span id="date"></span></li>
+              <li>Last updated: <span id="date"></span></li>
               <li id="description"></li>
             </ul>
             </div>
             <div class="row">
               <div class="col-6">
-                <div class="d-flex weather-temperature">
-                  <div class="float-left">
+                <div class="clearfix weather-temperature">
+                   alt=sunny id="icon" class="float-left"/>
                     <strong id="temperature"></strong>
                     <span class="units" 
                     ><a href="#" id="celsius-link" class="active"></a>°C</a>
@@ -82,19 +79,17 @@
     <h2> 
     </h2>
     </div>
-    <div class="col-6 types">
+    <div class="col-6">
         <p>
             <ul>
-                <li>Precipitation: <span id="Prescipitation"></span>%</li>
                 <li>Humidity: <span id="Humidity"></span>%</li>
                 <li>Wind: <span id="wind"></span> km/h</li>
             </ul>
           </div>
          </div>
         </p>
+        <div class="weather-forecast" id="forecast"></div>
         </div>
-        </div>
-        <div class="weather-links">
         </div>
         <div class="row daily">
             <div class="col day">
@@ -141,8 +136,6 @@
             </div>
         </div>
         <small>
-
-        </small>
         <a href="https://github.com/kirabjames/Weather-app-"
         target="blank"
         >Open-source code</a>
