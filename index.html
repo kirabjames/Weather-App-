@@ -12,141 +12,119 @@
     />
     <script src="https://unpkg.com/axios@1.1.2/dist/axios.min.js"></script>
     
-    <link rel="stylesheet" href="src/style.css"/>
+<link rel="stylesheet" href="src/styles.css">
     <title>Weather App</title>
+    
   </head>
   
   <body>
+    <div id="root" data-ol-has-click-handler>
       <div class="container">
-          <div class="weather-app-wrapper">
-            <div class="weather-app">
-            <form class="search-form" id="search-form">
-              <div class="row">
-                <div class="col-6">
-                  <input
-                    type="search"
-                    placeholder="Type a city.."
-                    autofocus="on"
-                    autocomplete="off"
-                    id="city-input"
-                    class="form-control shadow-sm"
-                  />
-                </div>
-                <div class="col-3">
-                  <input
-                  type="submit"
-                  value="Search"
-                  class="form-control btn btn-prmary shadow-sm w-100"
-                  />
-                </div>
-                <div class="col-3">
-                  <button
-                    class="btn btn-success w-100"
-                    id="current-location-button"
-                  >
-                    Current
-                  </button>
-                </div>
-              </div>
-            </form>
-            <div class="overview">
-            <h1 id="city"></h1>
-            <ul>
-              <li>Last updated: <span id="date"></span></li>
-              <li id="description"></li>
-            </ul>
-            </div>
-            <div class="row">
-              <div class="col-6">
-                <div class="clearfix weather-temperature">
-                   alt=sunny id="icon" class="float-left"/>
-                    <strong id="temperature"></strong>
-                    <span class="units" 
-                    ><a href="#" id="celsius-link" class="active"></a>°C</a>
-                      <a href="#" id="fahrenheit-link">°F</a></span>
+          <div class="App">
+          <div class="weather">
+            <form>
+                <div class="row">
+                  <div class="col-9 ">
+                    <input type="search" placeholder="Enter a city.." 
+                    class="form-control search-input">
+                  </div>
+                  <div class="col-3 p-0">
+                    <input type="submit" class="btn btn-primary w-100" 
+                    value="Search">
                   </div>
                 </div>
-              </div>
-          <div class="p-2"> 
-           </div>
+              </form>
+                <div class="weatherInfo">
+                    <div class="col-6">
+                      <h1>Phoenix</h1>
+                      <ul>
+                        <li>
+                          <span>Sunday 00:38,</span> drizzle</li>
+                          <li>Humidity:<strong>82%</strong>, 
+                            Wind: <strong>4.12km/h</strong>
+                          </li>
+                          </ul>
+                        </div>
+                        <div class="col-lg-6 col-md-6 col-sm-8">
+                          <div class="temperature-container d-flex justify-content-end">
+                            <canvas width="52" height="52">
+
+                            </canvas><div><span class="temperature">16</span>
+                              <span class="unit">°C</span>
+                            </div>
+                          </div>
+                        </div>
+                       </div>
+                      </div>
+                      <div class="WeatherForecast row">
+                        <div class="col">
+                          <div class="WeatherForecastPreview">
+                            <div class="forecast-time">Fri</div>
+                            <canvas width="38" height="38"></canvas>
+                         <div class="forecast-temperature">
+                           <span class="forecast-temperature-max">18°</span>
+                           <span class="forecast-temperature-min">15°</span>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col">
+                        <div class="WeatherForecastPreview">
+                          <div class="forecast-time">Sat</div>
+                          <canvas width="38" height="38"></canvas>
+                          <div class="forecast-temperature">
+                            <span class="forecast-temperature-max">19°</span>
+                            <span class="forecast-temperature-min">16°</span>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col">
+                        <div class="WeatherForecastPreview">
+                          <div class="forecast-time">Sun</div>
+                          <canvas width="38" height="38"></canvas>
+                            <div class="forecast-temperature">
+                            <span class="forecast-temperature-max">19°</span>
+                            <span class="forecast-temperature-min">16°</span>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col">
+                        <div class="WeatherForecastPreview">
+                          <div class="forecast-time">Mon</div>
+                        <canvas width="38" height="38"></canvas>
+                          <div class="forecast-temperature">
+                            <span class="forecast-temperature-max">19°</span>
+                            <span class="forecast-temperature-min">15°</span>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col">
+                        <div class="WeatherForecastPreview">
+                          <div class="forecast-time">Tue</div>
+                          <canvas width="38" height="38"></canvas>
+                            <div class="forecast-temperature">
+                              <span class="forecast-temperature-max">18°</span>
+                              <span class="forecast-temperature-min">15°</span>
+                            </div>
+                          </div>
+                        </div>
+                      </div> 
+                      <footer>
+                        "This project was coded by Kira James" "and is"
+                        <a href="https://github/kirabjames/weather-app-" 
+                      </a>
+                      </footer>
+                    </div>
+                    </div>
     </div>
-    <div class="row p-2">
-    <div class="col-6 today">
-    <h1 id="city">
-    
-    </h1>
-    <h2></h2>
-    <h2> 
-    </h2>
     </div>
-    <div class="col-6">
-        <p>
-            <ul>
-                <li>Humidity: <span id="Humidity"></span>%</li>
-                <li>Wind: <span id="wind"></span> km/h</li>
-            </ul>
-          </div>
-         </div>
-        </p>
-        <div class="weather-forecast" id="forecast"></div>
-        </div>
-        </div>
-        <div class="row daily">
-            <div class="col day">
-        <h3> Mon</h3>
-        <h1>🌤</h1>
-        <h6 class="temp">High:21°
-             Low: 17°
-        </h6>
-            </div>
-            <div class="col day">
-        <h3> Tue</h3>
-        <h1>🌥</h1>
-        <h6 class="temp">High:19°
-             Low: 16°
-        </h6>
-            </div>
-            <div class="col day">
-        <h3> Wed</h3>
-        <h1>🌦</h1>
-        <h6 class="temp">High:20°
-             Low: 16°
-        </h6>
-            </div>
-            <div class="col day">
-        <h3> Thu</h3>
-        <h1>🌦</h1>
-        <h6 class="temp">High: 22°
-             Low: 18°
-        </h6>
-            </div>
-            <div class="col day">
-        <h3> Fri</h3>
-        <h1>🌦</h1>
-        <h6 class="temp">High: 22°
-             Low: 19°
-        </h6>
-            </div>
-            <div class="col day">
-        <h3> Sat</h3>
-        <h1>🌦</h1>
-        <h6 class="temp">High: 23°
-             Low: 20°
-        </h6>
-            </div>
-        </div>
-        <small>
-        <a href="https://github.com/kirabjames/Weather-app-"
-        target="blank"
-        >Open-source code</a>
-        By Kira James
-      </small>
-        <div>
-        
-        </div>
-           </div>
-           </div>
-        <script src="src/script.js"></script>
-        </body>
-        </html>
-        
+  </div>
+  </body>
+  </html>
+
+
+
+                
+                
+                  
+                  
+               
