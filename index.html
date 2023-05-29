@@ -18,113 +18,74 @@
   </head>
   
   <body>
-    <div id="root" data-ol-has-click-handler>
       <div class="container">
-          <div class="App">
-          <div class="weather">
-            <form>
+          <div class="weather-app-wrapper">
+            <div class="weather-app-boarder">
+              <h1>Current Forecast</h1>
+              <form id="search-form" class="mb-5">
                 <div class="row">
-                  <div class="col-9 ">
-                    <input type="search" placeholder="Enter a city.." 
-                    class="form-control search-input">
+                  <div class="col-9">
+                    <input
+                      type="search"
+                      placeholder="Search for city.."
+                      class="form-control"
+                      id="searchItem" 
+                      autocomplete= "off"
+                    />
                   </div>
-                  <div class="col-3 p-0">
-                    <input type="submit" class="btn btn-primary w-100" 
-                    value="Search">
+                  <div class="col-3">
+                    <input type="submit" class="btn btn-primary" value="SEARCH"> </input>
                   </div>
                 </div>
               </form>
-                <div class="weatherInfo">
-                    <div class="col-6">
-                      <h1>Phoenix</h1>
-                      <ul>
-                        <li>
-                          <span>Sunday 00:38,</span> drizzle</li>
-                          <li>Humidity:<strong>82%</strong>, 
-                            Wind: <strong>4.12km/h</strong>
-                          </li>
-                          </ul>
-                        </div>
-                        <div class="col-lg-6 col-md-6 col-sm-8">
-                          <div class="temperature-container d-flex justify-content-end">
-                            <canvas width="52" height="52">
-
-                            </canvas><div><span class="temperature">16</span>
-                              <span class="unit">°C</span>
-                            </div>
-                          </div>
-                        </div>
-                       </div>
-                      </div>
-                      <div class="WeatherForecast row">
-                        <div class="col">
-                          <div class="WeatherForecastPreview">
-                            <div class="forecast-time">Fri</div>
-                            <canvas width="38" height="38"></canvas>
-                         <div class="forecast-temperature">
-                           <span class="forecast-temperature-max">18°</span>
-                           <span class="forecast-temperature-min">15°</span>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="col">
-                        <div class="WeatherForecastPreview">
-                          <div class="forecast-time">Sat</div>
-                          <canvas width="38" height="38"></canvas>
-                          <div class="forecast-temperature">
-                            <span class="forecast-temperature-max">19°</span>
-                            <span class="forecast-temperature-min">16°</span>
+    
+              <div class="row">
+                <div class="col-6">
+                  <ul>
+                    <li><span id="city" class="city"> </span></li>
+                    <li>Last updated: <span id="date" class="last-update"> </span></li>
+                    <li id="description"></li>
+                    <li>Humidity: <span id="humidity"class="humidity" ></span>%</li>
+                    <li>Wind speed: <span id="wind"class="wind-speed" ></span>km/h</li>
+                  </ul>
+                </div>
+    
+                <div class="col-6">
+                  <div class="d-flex weather-temperature">
+                    <img
+                      id="icon"
+                      src="http://shecodes-assets.s3.amazonaws.com/api/weather/icons/broken-clouds-day.png"
+                      alt="weather-icon"
+                    />
+                    <span class="temperature" id="temperature"> </span>
+                    <span class="units">
+                      ˚C
+                    </span>
+                  </div>
+                  </div>
+                  <div class="weather-forecast" id="forecast">
+                    <div class="row" >
+                      <div class="col-2"> 
+                        <div class="weather-forecast-date">
+                      
+                         <img alt="" width="20px"/>
+                         <div class="weather-forecast-temperature" > <span class="weather-forecast-max-temperature" > </span>
+                          <span class="weather-forecast-min-temperature" > </span>
+                           </div>
                           </div>
                         </div>
                       </div>
-                      <div class="col">
-                        <div class="WeatherForecastPreview">
-                          <div class="forecast-time">Sun</div>
-                          <canvas width="38" height="38"></canvas>
-                            <div class="forecast-temperature">
-                            <span class="forecast-temperature-max">19°</span>
-                            <span class="forecast-temperature-min">16°</span>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="col">
-                        <div class="WeatherForecastPreview">
-                          <div class="forecast-time">Mon</div>
-                        <canvas width="38" height="38"></canvas>
-                          <div class="forecast-temperature">
-                            <span class="forecast-temperature-max">19°</span>
-                            <span class="forecast-temperature-min">15°</span>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="col">
-                        <div class="WeatherForecastPreview">
-                          <div class="forecast-time">Tue</div>
-                          <canvas width="38" height="38"></canvas>
-                            <div class="forecast-temperature">
-                              <span class="forecast-temperature-max">18°</span>
-                              <span class="forecast-temperature-min">15°</span>
-                            </div>
-                          </div>
-                        </div>
-                      </div> 
-                      <footer>
-                        "This project was coded by Kira James" "and is"
-                        <a href="https://github/kirabjames/weather-app-" 
-                      </a>
-                      </footer>
                     </div>
-                    </div>
-    </div>
-    </div>
-  </div>
-  </body>
-  </html>
-
-
-
+                  </div>
                 
-                
-                  
-                  
-               
+              </div>
+            </div>
+                      <small class="signature">
+                        This project was coded by Kira James and is an 
+                        <a href="https://github/kirabjames/weather-app-" target="blank"> open-sourced on GitHub </a>
+                         and 
+                        <a href="https://lively-dasik-bd0741.netlify.app/"> hosted on Netlify</a>
+                      </small>
+      </div>
+      <script src="src/index.js"></script>
+    </body>
